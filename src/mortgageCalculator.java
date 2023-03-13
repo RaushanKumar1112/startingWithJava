@@ -10,7 +10,8 @@ public class mortgageCalculator {
         float rate = read.nextFloat();
         System.out.print("Periods (Years):");
         short time = read.nextShort();
-        rate/=1200;
+        rate/=12;
+        rate/=100;
         time*=12;
         double calc =Math.pow((1+rate),time);
         double amount=principal*(rate*calc)/(calc-1);
